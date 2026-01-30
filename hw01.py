@@ -1,4 +1,4 @@
-from numpy.random import uniform
+#from numpy.random import uniform
 # input: Two natural numbers B and C — the results of Bob's and Charlie's die rolls.
 def answer(B: int, C: int) -> str:
     # output: A string with the probability of Alice winning in the form of an 
