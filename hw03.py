@@ -109,7 +109,7 @@ def simulate_card_bust():
         # loop unless we reached to the threshold
         while(sum < threshold):
             # draw random values from 2-11
-            rand_draw: int = random.randint(1, len(deck)-1)
+            rand_draw: int = random.randint(2,11) # randint argument was not index... not (1, len(deck)-1) but (2,11)
             ## if the hand total exceeds 21 and we drew aces, then ace becomes 1 instead of 11
             if (sum + rand_draw >= threshold and rand_draw == 11):
                 rand_draw = 1
@@ -143,10 +143,10 @@ def simulate_card_bust():
     return x_values, pmf, cdf
 
 if __name__ == "__main__":
-    # # 1. Run and Plot Dice Simulation
-    # print("Running Dice Simulation...")
-    # d_x, d_pmf, d_cdf = simulate_dice_until_six()
-    # plot_distribution(d_x, d_pmf, d_cdf, "Rolls until 6")
+    # 1. Run and Plot Dice Simulation
+    print("Running Dice Simulation...")
+    d_x, d_pmf, d_cdf = simulate_dice_until_six()
+    plot_distribution(d_x, d_pmf, d_cdf, "Rolls until 6")
     
     # 2. Run and Plot Card Simulation
     print("Running Card Simulation (Your Work)...")
